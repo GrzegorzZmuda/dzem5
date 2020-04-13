@@ -171,7 +171,11 @@ def check(a,b):
 
 
         if (a.posy<b.posy+200-b.height) or (a.posy>b.posy+275-b.height):
-            
+            font = pygame.font.Font('freesansbold.ttf', 40)
+            end = font.render("YOU DIED", True, (255, 255, 255), (0, 0, 0))
+            screen.blit(end, (300, 500))
+            pygame.display.flip()
+            time.sleep(2.5)
             pygame.quit()
             exit()
 
