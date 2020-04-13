@@ -205,11 +205,13 @@ r2=rock()
 r3=rock2(700)
 r4=rock2(100)
 r5=rock3(450)
+s1 = pygame.image.load("sun_shiny.png")
 
 while Running:
     pl.progress()
     screen.blit(surf3, (0, 0))
     screen.blit(surf4, (0, 300))
+    screen.blit(s1, (1200, 20))
     pl.anm_jump()
     r1.mov()
     r2.mov()
