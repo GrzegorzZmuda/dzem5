@@ -235,7 +235,7 @@ while Running:
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_w:
-                temp=temp*1.35+3
+                temp=temp*1.30+3
                 if temp>130:
                     temp=130
             if event.key == pygame.K_s:
