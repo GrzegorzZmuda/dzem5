@@ -4,6 +4,53 @@ import random
 import time
 
 
+class rock3():
+    def __init__(self,a=1000):
+        self.height=random.randrange(10,200)
+
+        self.posx=a
+        self.posy=460
+
+        self.dsp=np.full((50, 20, 3), (150, 150, 150))
+
+
+        self.sr1=pygame.surfarray.make_surface(self.dsp)
+        self.sr2 = pygame.surfarray.make_surface(np.full((50, 20,3),(0,200,50)))
+        return None
+    def mov(self):
+        self.posx=self.posx-20
+        if self.posx<20:
+
+            self.__init__()
+
+        screen.blit(self.sr1, (self.posx, self.posy))
+
+
+
+
+class rock2():
+    def __init__(self,a=1000):
+        self.height=random.randrange(10,200)
+
+        self.posx=a
+        self.posy=280
+
+        self.dsp=np.full((50, 20, 3), (200, 200, 200))
+
+
+        self.sr1=pygame.surfarray.make_surface(self.dsp)
+        self.sr2 = pygame.surfarray.make_surface(np.full((50, 20,3),(0,200,50)))
+        return None
+    def mov(self):
+        self.posx=self.posx-15
+        if self.posx<30:
+
+            self.__init__()
+
+        screen.blit(self.sr1, (self.posx, self.posy))
+
+
+
 class rock():
     def __init__(self,a=1000):
         self.height=random.randrange(10,200)
@@ -155,13 +202,21 @@ temp=0
 
 r1=rock(350)
 r2=rock()
+r3=rock2(700)
+r4=rock2(100)
+r5=rock3(450)
 
 while Running:
     pl.progress()
+    screen.blit(surf3, (0, 0))
     screen.blit(surf4, (0, 300))
     pl.anm_jump()
     r1.mov()
     r2.mov()
+    r4.mov()
+    r3.mov()
+    r5.mov()
+
     t.mov(pl)
     pl.blt(screen)
     text = font.render(str(pl.points), True, (255, 255, 255), (0, 150, 255))
