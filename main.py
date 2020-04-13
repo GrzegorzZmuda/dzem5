@@ -168,14 +168,10 @@ class bunny:
 def check(a,b):
 
     if abs(a.posx-b.posx)<30:
-        print( b.posy+300-b.height)
-        print(a.posy)
-        print(b.posy + 400 - b.height)
 
-        print()
 
         if (a.posy<b.posy+200-b.height) or (a.posy>b.posy+275-b.height):
-
+            
             pygame.quit()
             exit()
 
